@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#254b3c">
+  <meta name="description" content="Spokojny Tydzień — znajdź czas na trening i rodzinny wieczór, z zapasem na przejście.">
+  <title>Spokojny Tydzień · czas na to, co ważne</title>
+  <style>:root{--paper:#f5f2ea;--ink:#26332d;--forest:#254b3c;--sage:#dde7dd;--muted:#6e776e;--line:#e2e3d9;--terra:#a6533a;--white:#fffdf8}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.5}button,input{font:inherit}button{cursor:pointer}a{color:inherit}svg{display:block}h1,h2,h3,p{margin:0}button:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid #b58367;outline-offset:4px}.shell{width:min(1200px,calc(100% - 80px));margin:auto}.topbar{height:96px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-size:21px;font-weight:650;letter-spacing:-.8px}.brand-light{font-weight:400}.brand-mark{display:grid;place-items:center;border:1px solid #b6c4b4;border-radius:12px;width:39px;height:39px}.brand-mark svg{width:28px;fill:none;stroke:var(--forest);stroke-width:1.8;stroke-linecap:round}.top-note{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}.little-dot{display:inline-block;width:6px;height:6px;background:#729274;border-radius:50%;flex:none}.hero{padding:49px 0 40px;display:grid;grid-template-columns:1.5fr 1fr;align-items:center;gap:20px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:1.8px;color:var(--muted);margin-bottom:12px}h1{font-size:clamp(38px,4.2vw,54px);line-height:1.12;font-weight:450;letter-spacing:-2px}h1 em{font-family:Georgia,serif;color:var(--forest);font-weight:400}.intro{max-width:510px;font-size:14px;color:var(--muted);margin-top:22px;line-height:1.8}.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:21px}.hero-tags span{border:1px solid #d5dbd0;border-radius:20px;padding:5px 11px;font-size:10px;color:#506752}.hero-art{max-width:330px;justify-self:center;position:relative;width:100%}.hero-art svg{width:100%}.art-caption{display:block;text-align:center;font-family:Georgia,serif;font-style:italic;color:var(--muted);font-size:12px;margin-top:0}.section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}.section-heading .eyebrow{margin-bottom:5px;font-size:9px}h2{font-size:21px;font-weight:550;letter-spacing:-.6px}.subtle{color:var(--muted);font-size:11px}.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-bottom:28px}.day-button{border:1px solid var(--line);background:var(--white);padding:15px 14px;min-height:83px;border-radius:12px;text-align:left;display:flex;flex-direction:column;gap:9px;transition:background .15s}.day-button:hover{background:#e9eee4}.day-button[aria-pressed=true]{background:var(--forest);border-color:var(--forest);color:#fffdf8}.day-name{font-size:12px;font-weight:600}.day-status{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--muted)}.day-button[aria-pressed=true] .day-status{color:#d9e5da}.status-dot{width:5px;height:5px;background:#829b83;border-radius:50%}.status-dot.conflict{background:#bf8e66}.status-dot.invalid{background:#b06c63}.workspace{display:grid;grid-template-columns:minmax(0,440px) minmax(0,1fr);gap:24px;align-items:start}.card{background:var(--white);border:1px solid var(--line);border-radius:17px;padding:27px 28px}.card-heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;gap:12px}.card-heading .eyebrow{margin-bottom:7px;font-size:9px}.number-tag{font-family:Georgia,serif;font-size:30px;color:#b4c1ac}.small-circle{display:grid;place-items:center;width:33px;height:33px;border:1px solid var(--line);border-radius:50%;color:#799079;font-size:20px}.editor fieldset{padding:0 0 20px;margin:0 0 20px;border:0;border-bottom:1px solid var(--line);min-width:0}.editor legend{font-size:13px;font-weight:650;margin-bottom:9px;display:flex;align-items:center;gap:9px;width:100%;padding:0}.legend-icon{width:25px;height:25px;border-radius:7px;display:inline-grid;place-items:center;font-size:18px;font-weight:400}.window-icon{background:#eceee4;color:#6d7e61}.workout-icon{background:#dde7dd;color:var(--forest)}.care-icon{background:#f0e3d6;color:#8c634b}.buffer-icon{background:#eaece3;color:#758064}.field-help{font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:12px}.time-pair{display:grid;grid-template-columns:minmax(0,1fr) 16px minmax(0,1fr);gap:12px}.time-pair label{font-size:10px;color:var(--muted)}input[type=time]{display:block;width:100%;border:1px solid var(--line);background:#faf9f4;border-radius:8px;padding:9px 11px;margin-top:5px;color:var(--ink);font-size:14px;min-width:0;min-height:42px}.pair-dash{align-self:end;margin-bottom:12px;text-align:center;color:#bac1b5}.fixed-control{display:flex;align-items:flex-start;gap:9px;margin-top:14px;font-size:11px}.fixed-control input{accent-color:var(--forest);margin:4px 0 0;width:16px;height:16px;flex:none}.fixed-control strong{display:block;font-weight:550}.fixed-control small{display:block;color:var(--muted);font-size:10px;margin-top:2px}.buffer-row{display:flex;gap:14px;align-items:center;justify-content:space-between}.buffer-row .field-help{margin:0}.minutes-label{display:flex;align-items:center;border:1px solid var(--line);background:#faf9f4;border-radius:8px;gap:4px;padding:8px 10px;font-size:10px;color:var(--muted)}input[type=number]{border:0;background:transparent;width:46px;color:var(--ink);font-size:15px;padding:0}.editor .buffer-field{margin-bottom:18px;padding-bottom:0;border:0}.button{border:0;border-radius:9px;padding:13px 17px;font-size:12px;font-weight:550;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px}.primary{width:100%;background:var(--forest);color:white}.primary:hover{background:#35614c}.right-column{display:flex;flex-direction:column;gap:18px}.timeline{position:relative;margin:3px 0 0;padding:8px 0}.timeline-item{display:grid;grid-template-columns:58px 18px minmax(0,1fr);gap:10px;position:relative;padding-bottom:14px}.timeline-item:not(:last-child):before{content:"";position:absolute;left:76px;top:18px;bottom:-6px;width:1px;background:#dce3d6}.timeline-time{font-size:10px;color:var(--muted);padding-top:16px;line-height:1.5}.timeline-node{width:8px;height:8px;border:2px solid #66806b;background:var(--white);border-radius:50%;margin:18px 0 0 5px;z-index:1}.timeline-event{padding:13px 15px;border-radius:9px;background:#e7eee4;border-left:3px solid #698871;min-width:0}.timeline-event.care{background:#f2e9de;border-color:#b68f70}.timeline-event.buffer{background:#f8f8f0;border:1px dashed #bdc6b2}.event-top{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:12px;font-weight:600}.event-duration{font-size:10px;color:var(--muted);font-weight:400}.event-detail{font-size:10px;color:#667565;margin-top:5px}.timeline-summary{font-size:11px;color:var(--muted);line-height:1.7;padding:0 0 15px;border-bottom:1px solid var(--line)}.timeline-legend{display:flex;flex-wrap:wrap;gap:17px;margin-top:17px;font-size:9px;color:var(--muted)}.timeline-legend span{display:flex;align-items:center;gap:6px}.swatch{display:block;width:7px;height:7px;border-radius:2px}.workout-swatch{background:#779275}.care-swatch{background:#b88f70}.buffer-swatch{border:1px dashed #8c9c78;background:transparent}.result{padding:23px 25px;background:#edf1e7}.result.conflict{background:#f4ece2;border-color:#e5d5c3}.result.invalid{background:#faeeea;border-color:#e4c9bf}.result-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}.result-icon{display:grid;place-items:center;border-radius:50%;width:29px;height:29px;background:#dce7d5;color:var(--forest);font-size:15px;flex:none}.conflict .result-icon{background:#eadcc8;color:#895c3d}.result h3{font-size:15px;font-weight:600}.result p,.result li{font-size:12px;color:#63735d;line-height:1.8}.conflict p,.conflict li{color:#7a634b}.result ul{padding-left:18px;margin:9px 0}.result-note{margin-top:8px}.suggestions{margin-top:16px;display:grid;gap:9px}.suggestion{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px;background:var(--white);border:1px solid #e1d6c6;border-radius:9px}.suggestion strong{display:block;font-size:13px}.suggestion small{font-size:10px;color:var(--muted)}.suggestion button{background:var(--forest);color:white;border:0;border-radius:7px;padding:10px 12px;font-size:11px;min-height:40px}.gentle-note{display:flex;gap:15px;align-items:center;padding:3px 14px;color:#7d886f}.gentle-note>span{font-size:28px}.gentle-note p{font-size:11px;line-height:1.8}.gentle-note strong{font-weight:400;color:var(--ink)}.bottom-notes{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin:22px 0 25px;font-size:10px;color:var(--muted)}.bottom-notes p:first-child{display:flex;gap:7px;align-items:center}footer{border-top:1px solid var(--line);padding:23px 0 28px;display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:10px}.footer-separator{padding:0 9px;color:#b3bca8}.form-errors{font-size:11px;color:#913d2d;line-height:1.7;margin:0 0 13px}.form-errors:empty{margin:0}.form-errors p+p{margin-top:4px}input[aria-invalid=true]{border-color:#a6533a;background:#fff4ee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.skip{position:fixed;top:-100px;left:10px;background:var(--forest);color:white;padding:10px;z-index:5}.skip:focus{top:10px}.pending-hint{font-size:11px}.no-timeline{font-size:12px;color:var(--muted);padding:15px 0 25px}
+@media(min-width:1500px){.shell{width:1200px}.hero{padding-top:58px;padding-bottom:48px}}
+@media(max-width:1000px){.shell{width:calc(100% - 44px)}.workspace{grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:18px}.card{padding:23px 20px}.days{gap:7px}.day-button{padding:12px 9px}.hero{grid-template-columns:1.5fr 1fr}.day-name{font-size:11px}.day-status{font-size:9px}.schedule h2{font-size:18px}.section-heading>.subtle{display:none}}
+@media(max-width:760px){.shell{width:calc(100% - 32px)}.topbar{height:75px}.top-note{display:none}.brand{font-size:19px}.hero{padding:32px 0 29px;grid-template-columns:1fr}.hero-art{display:none}h1{font-size:40px}.intro{font-size:13px;margin-top:16px}.hero-tags{margin-top:16px}.days{grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-bottom:19px}.day-button{min-height:76px}.workspace{grid-template-columns:1fr;gap:17px}.card{padding:23px 21px}.card-heading{margin-bottom:20px}.section-heading .eyebrow{font-size:8px;letter-spacing:1.3px}.bottom-notes{gap:9px;margin-top:18px}footer{flex-direction:column;gap:8px}.gentle-note{padding:2px 8px}.result{padding:22px}.schedule h2{font-size:19px}.day-name{font-size:11px}.day-status{font-size:9px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+  <script type="module">const TIME_FIELDS = ['availableStart', 'availableEnd', 'workoutStart', 'workoutEnd', 'careStart', 'careEnd'];
+function parseTime(value) {
+  if (typeof value !== 'string' || !/^\d{2}:\d{2}$/.test(value)) return null;
+  const [h, m] = value.split(':').map(Number);
+  return h < 24 && m < 60 ? h * 60 + m : null;
+}
+function formatTime(value) {
+  return `${String(Math.floor(value / 60)).padStart(2, '0')}:${String(value % 60).padStart(2, '0')}`;
+}
+function fingerprint(day) {
+  return JSON.stringify([...TIME_FIELDS.map(key => day?.[key]), day?.transitionMinutes, day?.fixedWorkout]);
+}
+function validateDay(day) {
+  const errors = [];
+  const values = {};
+  for (const key of TIME_FIELDS) {
+    values[key] = parseTime(day?.[key]);
+    if (values[key] === null) errors.push({ field: key, text: 'Wpisz poprawną godzinę.' });
+  }
+  const raw = day?.transitionMinutes;
+  values.transitionMinutes = typeof raw === 'string' && /^\d+$/.test(raw) ? Number(raw) : NaN;
+  if (!Number.isSafeInteger(values.transitionMinutes) || values.transitionMinutes < 0) {
+    errors.push({ field: 'transitionMinutes', text: 'Zapas czasu musi być pełną liczbą minut, od zera.' });
+  }
+  if (typeof day?.fixedWorkout !== 'boolean') errors.push({ field: 'fixedWorkout', text: 'Wybierz rodzaj treningu.' });
+  for (const [start, end, text] of [
+    ['availableStart', 'availableEnd', 'Koniec wieczoru musi być później niż początek.'],
+    ['workoutStart', 'workoutEnd', 'Trening musi kończyć się później niż zaczyna.'],
+    ['careStart', 'careEnd', 'Usypianie musi kończyć się później niż zaczyna.']
+  ]) {
+    if (values[start] !== null && values[end] !== null && values[end] <= values[start]) errors.push({ field: end, text });
+  }
+  if (!errors.length && (values.careStart < values.availableStart || values.careEnd > values.availableEnd)) {
+    errors.push({ field: 'availableEnd', text: 'Okno wieczoru musi obejmować całe usypianie.' });
+  }
+  return { errors, values: { ...values, fixedWorkout: day?.fixedWorkout } };
+}
+function fits(values, start = values.workoutStart) {
+  const duration = values.workoutEnd - values.workoutStart;
+  const reservedEnd = start + duration + values.transitionMinutes;
+  return start >= values.availableStart && reservedEnd <= values.availableEnd
+    && (reservedEnd <= values.careStart || start >= values.careEnd);
+}
+function proposals(day, v) {
+  const duration = v.workoutEnd - v.workoutStart;
+  const reserved = duration + v.transitionMinutes;
+  const ranges = [
+    [v.availableStart, Math.min(v.availableEnd - reserved, v.careStart - reserved), 'przed usypianiem'],
+    [Math.max(v.availableStart, v.careEnd), v.availableEnd - reserved, 'po usypianiu']
+  ];
+  const seen = new Set();
+  return ranges.filter(([min, max]) => min <= max).map(([min, max, label]) => {
+    const start = Math.max(min, Math.min(max, v.workoutStart));
+    return { start, end: start + duration, label };
+  }).filter(item => fits(v, item.start) && item.start !== v.workoutStart && !seen.has(item.start) && seen.add(item.start))
+    .sort((a, b) => Math.abs(a.start - v.workoutStart) - Math.abs(b.start - v.workoutStart))
+    .map(item => ({ start: formatTime(item.start), end: formatTime(item.end), label: item.label, source: fingerprint(day) }));
+}
+function checkDay(day) {
+  const { errors, values: v } = validateDay(day);
+  const source = fingerprint(day);
+  if (errors.length) return { status: 'invalid', errors, reasons: [], suggestions: [], source };
+  if (fits(v)) return { status: 'fits', errors: [], reasons: [], suggestions: [], source };
+  const reasons = [];
+  const add = (code, minutes, text) => reasons.push({ code, minutes, text });
+  if (v.workoutStart < v.availableStart) add('early', v.availableStart - v.workoutStart, 'Trening zaczyna się przed dostępnym oknem wieczoru.');
+  if (v.workoutEnd + v.transitionMinutes > v.availableEnd) {
+    const missing = v.workoutEnd + v.transitionMinutes - v.availableEnd;
+    add('late', missing, `Trening i zapas czasu wykraczają poza wieczór o ${missing} min.`);
+  }
+  const overlap = Math.min(v.workoutEnd, v.careEnd) - Math.max(v.workoutStart, v.careStart);
+  if (overlap > 0) add('overlap', overlap, `Trening i usypianie nakładają się przez ${overlap} min.`);
+  else if (v.workoutStart < v.careEnd && v.workoutEnd + v.transitionMinutes > v.careStart) {
+    const missing = v.workoutEnd + v.transitionMinutes - v.careStart;
+    add('transition', missing, `Przed usypianiem brakuje ${missing} min na przejście po treningu.`);
+  }
+  const suggestions = day.fixedWorkout ? [] : proposals(day, v);
+  return { status: day.fixedWorkout ? 'fixed-conflict' : suggestions.length ? 'movable-conflict' : 'no-slot', errors: [], reasons, suggestions, source };
+}
+function acceptSuggestion(day, suggestion) {
+  if (!suggestion || suggestion.source !== fingerprint(day) || day.fixedWorkout) return null;
+  const result = checkDay(day);
+  if (!result.suggestions.some(item => item.start === suggestion.start && item.end === suggestion.end)) return null;
+  const next = { ...day, workoutStart: suggestion.start, workoutEnd: suggestion.end };
+  return checkDay(next).status === 'fits' ? next : null;
+}
+
+const STORAGE_KEY = 'spokojny-tydzien.week.v1';
+const DAY_NAMES = ['Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piątek', 'Sobota', 'Niedziela'];
+function createExampleWeek() {
+  return {
+    version: 1, selectedDay: 0,
+    days: DAY_NAMES.map((_, i) => ({
+      availableStart: '16:00', availableEnd: '21:00', workoutStart: i === 2 ? '16:30' : '17:00',
+      workoutEnd: i === 2 ? '17:30' : '18:00', careStart: '18:00', careEnd: '18:30',
+      transitionMinutes: '15', fixedWorkout: i !== 1
+    }))
+  };
+}
+function validWeek(week) {
+  return week?.version === 1 && Number.isInteger(week.selectedDay) && week.selectedDay >= 0 && week.selectedDay < 7
+    && Array.isArray(week.days) && week.days.length === 7 && week.days.every(day =>
+      day && typeof day.fixedWorkout === 'boolean' && [...TIME_FIELDS, 'transitionMinutes'].every(key =>
+        typeof day[key] === 'string' && day[key].length <= 32));
+}
+function loadWeek(storage) {
+  try {
+    const raw = storage.getItem(STORAGE_KEY);
+    if (raw === null) return { week: createExampleWeek(), status: 'example' };
+    const parsed = JSON.parse(raw);
+    if (!validWeek(parsed)) throw new Error('Unsupported saved week');
+    // Copy only the fields this app owns; never trust extra stored properties.
+    const week = { version: 1, selectedDay: parsed.selectedDay, days: parsed.days.map(day =>
+      Object.fromEntries([...TIME_FIELDS, 'transitionMinutes', 'fixedWorkout'].map(key => [key, day[key]]))) };
+    return { week, status: 'restored' };
+  } catch {
+    return { week: createExampleWeek(), status: 'recovery' };
+  }
+}
+function saveWeek(storage, week) {
+  try {
+    if (!validWeek(week)) return false;
+    storage.setItem(STORAGE_KEY, JSON.stringify(week));
+    return true;
+  } catch { return false; }
+}
+
+
+const $ = selector => document.querySelector(selector);
+const form = $('#plan-form');
+let storage;
+try { storage = window.localStorage; } catch { storage = null; }
+const loaded = loadWeek(storage);
+const week = loaded.week;
+let checked = null;
+const fieldLabels = { availableStart: 'Początek wieczoru', availableEnd: 'Koniec wieczoru', workoutStart: 'Początek treningu', workoutEnd: 'Koniec treningu', careStart: 'Początek usypiania', careEnd: 'Koniec usypiania', transitionMinutes: 'Zapas czasu', fixedWorkout: 'Rodzaj treningu' };
+const currentDay = () => week.days[week.selectedDay];
+function element(tag, className, text) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (text !== undefined) node.textContent = text;
+  return node;
+}
+function save() {
+  const ok = saveWeek(storage, week);
+  $('#storage-status').textContent = ok ? 'Plan zapisany w tej przeglądarce. Bez konta.' : 'Zapis jest niedostępny. Plan działa tylko do zamknięcia tej strony.';
+}
+function renderDays() {
+  const nav = $('#days');
+  const focusedDay = document.activeElement?.dataset.day;
+  nav.replaceChildren(...week.days.map((day, index) => {
+    const outcome = checkDay(day);
+    const label = outcome.status === 'fits' ? 'Jest zapas' : outcome.status === 'invalid' ? 'Uzupełnij plan' : 'Potrzebuje uwagi';
+    const button = element('button', 'day-button');
+    button.type = 'button'; button.dataset.day = String(index);
+    button.setAttribute('aria-pressed', String(index === week.selectedDay));
+    button.append(element('span', 'day-name', DAY_NAMES[index]));
+    const status = element('span', 'day-status');
+    status.append(element('i', `status-dot ${outcome.status === 'fits' ? '' : outcome.status === 'invalid' ? 'invalid' : 'conflict'}`), element('span', '', label));
+    button.append(status);
+    button.addEventListener('click', () => selectDay(index));
+    return button;
+  }));
+  if (focusedDay !== undefined) nav.querySelector(`[data-day="${focusedDay}"]`)?.focus();
+}
+function populateForm() {
+  const day = currentDay();
+  for (const key of [...TIME_FIELDS, 'transitionMinutes']) form.elements.namedItem(key).value = day[key];
+  form.elements.namedItem('fixedWorkout').checked = day.fixedWorkout;
+  $('#evening-title').textContent = DAY_NAMES[week.selectedDay];
+  $('.number-tag').textContent = String(week.selectedDay + 1).padStart(2, '0');
+}
+function clearErrors() {
+  $('#form-errors').replaceChildren();
+  for (const key of [...TIME_FIELDS, 'transitionMinutes', 'fixedWorkout']) form.elements.namedItem(key).removeAttribute('aria-invalid');
+}
+function renderTimeline() {
+  const day = currentDay();
+  const { errors, values: v } = validateDay(day);
+  const timeline = $('#timeline');
+  timeline.replaceChildren();
+  if (errors.length) {
+    timeline.append(element('p', 'no-timeline', 'Uzupełnij poprawne godziny, aby zobaczyć przebieg wieczoru.'));
+    $('#timeline-summary').textContent = 'Wszystkie wydarzenia dotyczą tego samego dnia.';
+    return;
+  }
+  const items = [
+    { at: v.workoutStart, end: v.workoutEnd, title: 'Czas na trening', detail: day.fixedWorkout ? 'Stały termin · godzina pozostaje bez zmian' : 'Elastyczny trening · można szukać innej pory', type: 'workout' },
+    { at: v.workoutEnd, end: v.workoutEnd + v.transitionMinutes, title: 'Chwila na przejście', detail: 'Powrót i przygotowanie do kolejnego zajęcia', type: 'buffer' },
+    { at: v.careStart, end: v.careEnd, title: 'Spokojne usypianie', detail: 'Stały punkt wieczoru', type: 'care' }
+  ].sort((a, b) => a.at - b.at || ({ workout: 0, buffer: 1, care: 2 }[a.type] - { workout: 0, buffer: 1, care: 2 }[b.type]));
+  const displayEnd = value => value >= 1440 ? 'po północy' : formatTime(value);
+  for (const item of items) {
+    const row = element('div', 'timeline-item');
+    const time = element('div', 'timeline-time', formatTime(item.at));
+    const node = element('span', 'timeline-node'); node.setAttribute('aria-hidden', 'true');
+    const card = element('div', `timeline-event ${item.type}`);
+    const top = element('div', 'event-top');
+    top.append(element('span', '', item.title), element('span', 'event-duration', `${item.end - item.at} min`));
+    card.append(top, element('p', 'event-detail', `${formatTime(item.at)}–${displayEnd(item.end)} · ${item.detail}`));
+    row.append(time, node, card); timeline.append(row);
+  }
+  $('#timeline-summary').textContent = `Dostępny wieczór: ${day.availableStart}–${day.availableEnd}. Zapas po treningu: ${day.transitionMinutes} min. Karty są uporządkowane według początku — mogą pokazywać konflikt.`;
+}
+function renderResult(outcome = null, accepted = false) {
+  const region = $('#result');
+  region.replaceChildren();
+  region.className = 'result card';
+  const head = element('div', 'result-head');
+  const icon = element('span', 'result-icon', outcome?.status === 'fits' ? '✓' : outcome ? '!' : '✧');
+  icon.setAttribute('aria-hidden', 'true');
+  let title = 'Sprawdź, zanim ruszysz';
+  if (outcome?.status === 'fits') title = accepted ? 'Zmiana przyjęta. Jest miejsce na oddech.' : 'Ten wieczór się mieści';
+  else if (outcome?.status === 'invalid') title = 'Jeszcze kilka szczegółów';
+  else if (outcome?.status === 'fixed-conflict') title = 'Stałe terminy potrzebują uwagi';
+  else if (outcome?.status === 'no-slot') title = 'Brakuje miejsca w tym wieczorze';
+  else if (outcome) title = 'Można ułożyć to spokojniej';
+  head.append(icon, element('h3', '', title)); region.append(head);
+  if (!outcome) {
+    region.append(element('p', '', 'Godziny mogą stykać się na papierze, ale między nimi potrzebujesz czasu. Sprawdź wieczór, żeby zobaczyć pełny obraz.'));
+    return;
+  }
+  if (outcome.status === 'invalid') {
+    region.classList.add('invalid');
+    region.append(element('p', '', 'Popraw pola zaznaczone w formularzu. Plan pozostaje bez zmian.'));
+    return;
+  }
+  if (outcome.status === 'fits') {
+    region.append(element('p', '', `Trening i ${currentDay().transitionMinutes} min zapasu mieszczą się obok usypiania. Wszystko pozostaje w dostępnym oknie wieczoru.`));
+    return;
+  }
+  region.classList.add('conflict');
+  const list = element('ul');
+  outcome.reasons.forEach(reason => list.append(element('li', '', reason.text)));
+  region.append(list);
+  if (outcome.status === 'fixed-conflict') {
+    region.append(element('p', 'result-note', 'Trening z trenerem i usypianie pozostają na swoich miejscach. Uzgodnij inną godzinę treningu, a potem wpisz ją tutaj i sprawdź ponownie.'));
+  } else if (outcome.status === 'no-slot') {
+    region.append(element('p', 'result-note', 'W podanym oknie nie ma dozwolonej pory na cały trening i zapas czasu. Możesz sprawdzić inne dostępne godziny. Żaden termin nie został przesunięty.'));
+  } else {
+    region.append(element('p', 'result-note', 'Te propozycje zachowują długość treningu, zapas po nim i porę usypiania. Wybierz zmianę, która Ci odpowiada.'));
+    const suggestions = element('div', 'suggestions');
+    outcome.suggestions.forEach(suggestion => {
+      const row = element('div', 'suggestion');
+      const text = element('div');
+      text.append(element('strong', '', `${suggestion.start}–${suggestion.end}`), element('small', '', `Trening ${suggestion.label} · zapas ${currentDay().transitionMinutes} min`));
+      const button = element('button', '', 'Wybierz'); button.type = 'button';
+      button.setAttribute('aria-label', `Wybierz trening ${suggestion.start}–${suggestion.end}`);
+      button.addEventListener('click', () => {
+        const next = acceptSuggestion(currentDay(), suggestion);
+        if (!next) { checked = null; renderResult(); return; }
+        week.days[week.selectedDay] = next;
+        populateForm(); clearErrors(); renderDays(); renderTimeline(); save();
+        checked = checkDay(next); renderResult(checked, true);
+        region.setAttribute('tabindex', '-1'); region.focus();
+      });
+      row.append(text, button); suggestions.append(row);
+    });
+    region.append(suggestions);
+  }
+}
+function selectDay(index) {
+  week.selectedDay = index; checked = null;
+  populateForm(); clearErrors(); renderDays(); renderTimeline(); renderResult(); save();
+}
+form.addEventListener('input', () => {
+  const day = currentDay();
+  for (const key of [...TIME_FIELDS, 'transitionMinutes']) day[key] = form.elements.namedItem(key).value;
+  day.fixedWorkout = form.elements.namedItem('fixedWorkout').checked;
+  checked = null; clearErrors(); renderDays(); renderTimeline(); renderResult(); save();
+});
+form.addEventListener('submit', event => {
+  event.preventDefault(); clearErrors();
+  checked = checkDay(currentDay());
+  if (checked.errors.length) {
+    for (const error of checked.errors) {
+      form.elements.namedItem(error.field).setAttribute('aria-invalid', 'true');
+      $('#form-errors').append(element('p', '', `${fieldLabels[error.field]}: ${error.text}`));
+    }
+    form.elements.namedItem(checked.errors[0].field).focus();
+  }
+  renderResult(checked); renderTimeline();
+});
+populateForm(); renderDays(); renderTimeline(); renderResult();
+$('#storage-status').textContent = loaded.status === 'restored' ? 'Twój zapisany tydzień został przywrócony w tej przeglądarce.'
+  : loaded.status === 'recovery' ? 'Nie udało się odczytać zapisu. Pokazujemy fikcyjny przykład; sprawdzimy zapis przy pierwszej zmianie.'
+  : 'Fikcyjny przykład na start. Twoje zmiany zapiszą się w tej przeglądarce.';
+</script>
+</head>
+<body>
+  <a class="skip" href="#evening">Przejdź do planowania</a>
+  <header class="topbar shell">
+    <a class="brand" href="./" aria-label="Spokojny Tydzień — początek">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32"><path d="M8 21c0-9 5-14 16-14 0 11-5 17-13 17M8 25 21 12"/></svg></span>
+      <span>spokojny<span class="brand-light">tydzień</span></span>
+    </a>
+    <span class="top-note"><span class="little-dot"></span> Mały plan. Więcej oddechu.</span>
+  </header>
+  <main class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy"><p class="eyebrow">TWÓJ RYTM, TWOJE PRIORYTETY</p>
+        <h1 id="page-title">Zostaw miejsce<br>na <em>spokojny wieczór.</em></h1>
+        <p class="intro">Trening, usypianie i chwila pomiędzy. Sprawdź, czy wszystko się mieści — bez przesuwania ważnych zobowiązań.</p>
+        <div class="hero-tags"><span>Plan tygodnia</span><span>Zapas na przejście</span><span>Ty decydujesz</span></div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 340 250"><defs><pattern id="grain" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r=".6" fill="#254b3c" opacity=".12"/></pattern></defs>
+          <path d="M62 204V99a101 101 0 0 1 202 0v105Z" fill="#dde7dd"/>
+          <path d="M62 204V99a101 101 0 0 1 202 0v105Z" fill="url(#grain)"/>
+          <circle cx="228" cy="58" r="25" fill="#d6b394"/>
+          <path d="M98 203c-4-67 5-98 23-125M109 119c-29-7-42-21-41-40 27 0 42 15 41 40M108 146c34-1 52-16 55-38-29-3-49 11-55 38M101 179c-28-3-45-19-48-39 26-2 45 10 48 39" fill="#65846b"/>
+          <g transform="rotate(-8 192 140)"><rect x="151" y="100" width="121" height="85" rx="13" fill="#fffdf8"/><rect x="163" y="114" width="56" height="5" rx="2" fill="#9cb1a0"/><rect x="163" y="130" width="95" height="22" rx="6" fill="#254b3c"/><circle cx="175" cy="141" r="4" fill="#dfe9dc"/><path d="m173 141 2 2 4-5" fill="none" stroke="#254b3c" stroke-width="1.5"/><path d="M187 141h55" stroke="#dfe9dc" stroke-width="3"/><rect x="163" y="162" width="68" height="4" rx="2" fill="#dfd9cb"/></g>
+          <path d="M36 207h265" stroke="#a0ae97" stroke-width="2"/><path d="m284 104 4-8 4 8-4 8Z" fill="#b58367"/>
+        </svg>
+        <span class="art-caption">Czas pomiędzy też jest częścią planu.</span>
+      </div>
+    </section>
+    <section class="week-section" aria-labelledby="week-title">
+      <div class="section-heading"><div><p class="eyebrow">SIEDEM DNI. JEDEN SPOKOJNIEJSZY RYTM.</p><h2 id="week-title">Twój tydzień</h2></div><span class="subtle">Wybierz dzień, który chcesz ułożyć</span></div>
+      <nav id="days" class="days" aria-label="Wybór dnia tygodnia"></nav>
+    </section>
+    <section id="evening" class="workspace" aria-labelledby="evening-title">
+      <div class="editor card">
+        <div class="card-heading"><div><p class="eyebrow">UŁÓŻ TEN WIECZÓR</p><h2 id="evening-title">Poniedziałek</h2></div><span class="number-tag" aria-hidden="true">01</span></div>
+        <form id="plan-form" novalidate>
+          <fieldset><legend><span class="legend-icon window-icon" aria-hidden="true">◷</span> Dostępny wieczór</legend><p class="field-help">Granice czasu, w którym chcesz zmieścić plan.</p>
+            <div class="time-pair"><label>Od<input name="availableStart" type="time" required aria-describedby="form-errors"></label><span class="pair-dash" aria-hidden="true">—</span><label>Do<input name="availableEnd" type="time" required aria-describedby="form-errors"></label></div>
+          </fieldset>
+          <fieldset><legend><span class="legend-icon workout-icon" aria-hidden="true">↗</span> Trening</legend>
+            <div class="time-pair"><label>Początek<input name="workoutStart" type="time" required aria-describedby="form-errors"></label><span class="pair-dash" aria-hidden="true">—</span><label>Koniec<input name="workoutEnd" type="time" required aria-describedby="form-errors"></label></div>
+            <label class="fixed-control"><input name="fixedWorkout" type="checkbox"><span><strong>Stały termin, np. z trenerem</strong><small>Planer zachowa tę godzinę.</small></span></label>
+          </fieldset>
+          <fieldset><legend><span class="legend-icon care-icon" aria-hidden="true">☾</span> Usypianie</legend><p class="field-help">Ta pora pozostaje stała przy szukaniu zmian.</p>
+            <div class="time-pair"><label>Początek<input name="careStart" type="time" required aria-describedby="form-errors"></label><span class="pair-dash" aria-hidden="true">—</span><label>Koniec<input name="careEnd" type="time" required aria-describedby="form-errors"></label></div>
+          </fieldset>
+          <fieldset class="buffer-field"><legend><span class="legend-icon buffer-icon" aria-hidden="true">···</span> Zapas po treningu</legend>
+            <div class="buffer-row"><p class="field-help">Powrót, prysznic, chwila oddechu.<br>Ten czas też musi się zmieścić.</p><label class="minutes-label"><span class="sr-only">Zapas czasu w minutach</span><input name="transitionMinutes" type="number" min="0" step="1" required aria-describedby="form-errors"><span>min</span></label></div>
+          </fieldset>
+          <div id="form-errors" class="form-errors" role="alert"></div>
+          <button class="button primary" type="submit">Sprawdź mój wieczór <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+      <div class="right-column">
+        <section class="schedule card" aria-labelledby="schedule-title"><div class="card-heading"><div><p class="eyebrow">WIDZISZ CAŁY OBRAZ</p><h2 id="schedule-title">Twój wieczór, krok po kroku</h2></div><span class="small-circle" aria-hidden="true">◷</span></div>
+          <div id="timeline" class="timeline"></div>
+          <p id="timeline-summary" class="timeline-summary"></p>
+          <div class="timeline-legend"><span><i class="swatch workout-swatch"></i>Trening</span><span><i class="swatch buffer-swatch"></i>Przejście</span><span><i class="swatch care-swatch"></i>Usypianie</span></div>
+        </section>
+        <section id="result" class="result card" aria-live="polite" aria-atomic="true"></section>
+        <aside class="gentle-note"><span aria-hidden="true">✧</span><p>Dobry plan zostawia trochę przestrzeni.<br><strong>Nie każda wolna minuta musi być zajęta.</strong></p></aside>
+      </div>
+    </section>
+    <div class="bottom-notes"><p><span class="little-dot"></span><span id="storage-status" role="status">Plan pozostaje w tej przeglądarce.</span></p><p>Przykłady startowe są fikcyjne. Wpisz własne godziny.</p></div>
+    <footer><span>spokojnytydzień <span class="footer-separator">/</span> mały krok do lepszego rytmu</span><span>Build With AI · wersja konkursowa</span></footer>
+    <noscript><p class="form-errors">Włącz JavaScript, aby sprawdzać i zapisywać plan.</p></noscript>
+  </main>
+</body>
+</html>
